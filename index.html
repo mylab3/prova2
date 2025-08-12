@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promemoria Assistito</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1 class="app-title">Promemoria Assistito</h1>
+        <button id="menu-btn">☰</button>
+    </header>
+
+    <nav id="side-menu">
+        <a href="#" class="menu-item" data-page="impostazioni">Impostazioni</a>
+        <a href="#" class="menu-item" data-page="promemoria">Promemoria</a>
+        <a href="#" class="menu-item" data-page="in-farmacia">In Farmacia</a>
+    </nav>
+
+    <main>
+        <!-- Pagina Impostazioni -->
+        <div id="impostazioni" class="page">
+            <h2>Impostazioni</h2>
+            <form id="add-user-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" required>
+                <label for="codice-fiscale">Codice Fiscale:</label>
+                <input type="text" id="codice-fiscale" required minlength="16" maxlength="16">
+                <button type="submit">Aggiungi Assistito</button>
+            </form>
+            <div id="user-list"></div>
+            <div class="backup-section">
+                <h3>Backup</h3>
+                <button id="export-btn" class="btn-yellow">Esporta Backup</button>
+                <input type="file" id="import-file" accept=".json" style="display:none;">
+                <button id="import-btn">Importa Backup</button>
+            </div>
+        </div>
+
+        <!-- Pagina Promemoria -->
+        <div id="promemoria" class="page">
+            <h2>Promemoria</h2>
+            <label for="select-user-promemoria">Seleziona Assistito:</label>
+            <select id="select-user-promemoria"></select>
+            <form id="add-nre-form">
+                <label for="nre">Nuovo NRE:</label>
+                <input type="text" id="nre" placeholder="Inserisci NRE" required>
+                <button type="submit">Aggiungi NRE</button>
+            </form>
+            <div id="nre-list"></div>
+        </div>
+
+        <!-- Pagina In Farmacia -->
+        <div id="in-farmacia" class="page active">
+            <h2>In Farmacia</h2>
+            <label for="select-user-farmacia">Seleziona Assistito:</label>
+            <select id="select-user-farmacia"></select>
+            <div id="assistito-info"></div>
+            <div id="ricette-container"></div>
+            <div id="navigation-buttons">
+                <button id="prev-btn">⬅️ Precedente</button>
+                <button id="next-btn">Successiva ➡️</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
