@@ -140,7 +140,7 @@ button:hover { opacity: 0.9; }
 #cf-barcode-container { 
     max-width: 80mm; 
     margin-top: 20px;     /* Spazio sopra il codice fiscale */
-    margin-bottom: 20px;  /* Spazio MINIMO richiesto sotto il codice fiscale */
+    margin-bottom: 60px;  /* Spazio MINIMO richiesto sotto il codice fiscale */
 }
 #nre-barcode-container-1 { 
     max-width: 40mm;
