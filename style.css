@@ -139,7 +139,7 @@ button:hover { opacity: 0.9; }
     max-width: 80mm; 
     height: 40mm;
     /* MODIFICA PER SPAZIATURA: Aggiunto margine inferiore */
-    margin-bottom: 20px; 
+    margin-bottom: 5px; 
 }
 #nre-barcode-container-1 { max-width: 40mm; height: 10mm }
 #nre-barcode-container-2 { max-width: 80mm; height: 10mm }
